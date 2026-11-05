@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fireplace Ad Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #e5e5e5;
+        }
+
+        .fireplace {
+            width: 1032px;
+            margin: 0 auto;
+        }
+
+        iframe {
+            display: block;
+            border: none;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 320px 392px 320px;
+        }
+
+        .publisher {
+            background: white;
+            min-height: 975px;
+        }
+    </style>
+</head>
+<body>
+<main class="fireplace">
+    <iframe src="top.html" width="1032" height="250"
+            title="Top banner"></iframe>
+
+    <div class="columns">
+        <iframe src="left.html" width="320" height="975"
+                title="Left banner"></iframe>
+
+        <div class="publisher"></div>
+
+        <iframe src="right.html" width="320" height="975"
+                title="Right banner"></iframe>
+    </div>
+</main>
+</body>
+</html>
