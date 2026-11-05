@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: #242424;
+}
+.ad {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    isolation: isolate;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url("assets/bg-big.jpg");
+    background-repeat: no-repeat;
+    background-size: 1672px 975px;
+    background-position: 0 0;
+}
+
+.ad--left {
+    width: 320px;
+    height: 975px;
+    background-position: 0 0;
+}
+.ad--top {
+    width: 1032px;
+    height: 250px;
+    background-position: -320px 0;
+}
+
+.ad--right {
+    width: 320px;
+    height: 975px;
+    background-position: -1352px 0;
+}
+
+.ad:focus-visible {
+    outline: 3px solid #ffcd43;
+    outline-offset: -3px;
+}
+
+.side-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 320px;
+    height: 975px;
+    max-width: none;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.logo {
+    z-index: 2;
+    transform-origin: 160px 130px;
+}
+
+.panel {
+    z-index: 3;
+    border:none;
+}
+.copy {
+    z-index: 4;
+}
+
+.cta {
+    position: absolute;
+    z-index: 5;
+
+    left: 73.75px;
+    top: 837px;
+
+    display: block;
+    width: 172.5px;
+    height: 46.5px;
+
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.cta-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    transform-origin: center;
+}
+.top-headline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 1032px;
+    height: 250px;
+    max-width: none;
+
+    pointer-events: none;
+    user-select: none;
+}
+.ad img {
+    display: block;
+    image-rendering: auto;
+}
+.js .animated {
+    opacity: 0;
+}
+.js.reduce-motion .animated {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .animated {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+    }
+}
+
+
+.ad::before {
+    content: none !important;
+}
+
+.ad .panel {
+    clip-path: inset(744.5px 0 61px 0);
+    outline: 0;
+    box-shadow: none;
+}
+
+.ad .copy {
+    mix-blend-mode: screen;
+}
+.ad .cta {
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.ad .cta-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+.ad .black-key {
+    filter: none !important;
+}
